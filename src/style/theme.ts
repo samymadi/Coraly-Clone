@@ -48,8 +48,10 @@ export const lightTheme :Theme =  createTheme({
         secondary:{
             main:PaletteLight.secondaryMain
         },
-        
-        
     },
+
+    typography:{
+      fontFamily:['Inter'].join(''),
+    }
     
 })
