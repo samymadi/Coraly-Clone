@@ -15,8 +15,7 @@ import {
 
 //routes
 import DashboardRouting from './dashboardRouting'
-import LoginLayout from '../layout/loginLayout'
-
+import Login from '../login/login'
 
 //routespath
 import routesPath from './routePaths'
@@ -35,7 +34,7 @@ export type RoutingComponent  = React.FC<RoutingProps>
 const routes = {
     login:{
       path:routesPath.LOGIN,
-      component :LoginLayout
+      component :Login
     },
     dashboard:{
       path:routesPath.DASHBOARD.ROOT,
