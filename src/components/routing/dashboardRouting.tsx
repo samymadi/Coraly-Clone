@@ -68,9 +68,10 @@ const routes = {
 const DashboardRouting:DashboardRoutingComponent = ()=>{
   return (
         <Switch>
-          {Object.values(routes).map(props=>(
+          {Object.values(routes).map((props,index)=>(
             <Route
                 {...props}
+                key={index}
             />
           ))}
         </Switch> 

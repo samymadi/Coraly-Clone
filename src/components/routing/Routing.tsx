@@ -15,7 +15,7 @@ import {
 
 //routes
 import DashboardRouting from './dashboardRouting'
-
+import Login from '../login/login'
 
 //routespath
 import routesPath from './routePaths'
@@ -34,7 +34,7 @@ export type RoutingComponent  = React.FC<RoutingProps>
 const routes = {
     login:{
       path:routesPath.LOGIN,
-      component:()=><div>login</div>
+      component :Login
     },
     dashboard:{
       path:routesPath.DASHBOARD.ROOT,
@@ -48,9 +48,10 @@ const Routing:RoutingComponent = ()=>{
   return (
     <Router>
         <Switch>
-          {Object.values(routes).map(props=>(
+          {Object.values(routes).map((props,index)=>(
             <Route
                 {...props}
+                key={index}
             />
           ))}
         </Switch> 
