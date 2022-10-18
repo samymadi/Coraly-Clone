@@ -13,7 +13,10 @@ const PaletteLight = {
   secondaryMain:'#2CCFBC',
   secondaryHover:'#28BAA9',
   secondaryActive:'#23A696',
-  secondaryDisabled:'#96E7DE'
+  secondaryDisabled:'#96E7DE',
+
+
+  actionSecondaryDefault:'#04385A'
 }
 
 
@@ -30,8 +33,14 @@ const lightThemeObject = {
 
     neutral:{
       '90':"#464356",
-      "70":"#6F6D7B"
+      "70":"#6F6D7B",
+      "80":"#5A5869",
+      
     },
+
+    actionSecondary:{
+        default:PaletteLight.actionSecondaryDefault
+    }
     
     
   },
