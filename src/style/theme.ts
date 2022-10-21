@@ -5,12 +5,12 @@ import {
 
 
 const PaletteLight = {
-  primaryMain:'#F93E6C',
+  primaryDefault:'#F93E6C',
   primaryHover:'#E03861',
   primaryActive:'#C73256',
   primaryDisabled:'#FC9FB6',
   
-  secondaryMain:'#2CCFBC',
+  secondaryDefault:'#2CCFBC',
   secondaryHover:'#28BAA9',
   secondaryActive:'#23A696',
   secondaryDisabled:'#96E7DE',
@@ -23,12 +23,12 @@ const PaletteLight = {
 const lightThemeObject = {
   paletteColor:{
     primary:{
-      main:PaletteLight.primaryMain,
+      default:PaletteLight.primaryDefault,
       
       
     },
     secondary:{
-      main:PaletteLight.secondaryMain
+      default:PaletteLight.secondaryDefault
     },
 
     neutral:{
