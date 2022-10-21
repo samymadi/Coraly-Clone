@@ -1,6 +1,7 @@
 import React,{
     memo,
     PropsWithChildren,
+    useState,
 } from 'react'
 
 // react router
@@ -30,11 +31,11 @@ export type RoutingComponent  = React.FC<RoutingProps>
 
 
 
-
 const routes = {
     login:{
       path:routesPath.LOGIN,
       component :Login
+                        
     },
     dashboard:{
       path:routesPath.DASHBOARD.ROOT,
@@ -55,6 +56,8 @@ const Routing:RoutingComponent = ()=>{
             />
           ))}
         </Switch> 
+
+        
     </Router>
   )
 }
