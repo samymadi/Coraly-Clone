@@ -22,6 +22,10 @@ import Login from '../login/login'
 import routesPath from './routePaths'
 
 
+//test
+import ButtonIcon from '../shared/CustomButtonIcon/buttonIcon'
+
+
 export interface RoutingProps extends PropsWithChildren{
 
 }
@@ -34,7 +38,7 @@ export type RoutingComponent  = React.FC<RoutingProps>
 const routes = {
     login:{
       path:routesPath.LOGIN,
-      component :Login
+      component :ButtonIcon
                         
     },
     dashboard:{
