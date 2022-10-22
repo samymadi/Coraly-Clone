@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import TitleDescTemp from '../shared/titleDescTemp'
+import TitleDescTemp from '../../shared/titleDescTemp'
 
 
 

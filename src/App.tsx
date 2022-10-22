@@ -14,7 +14,7 @@ import {
 
 
 //routing 
-import Routing from './components/routing/Routing';
+import Routing from './navigation/routing/Routing';
 
 
 

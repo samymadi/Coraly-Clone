@@ -16,14 +16,13 @@ import {
 
 //routes
 import DashboardRouting from './dashboardRouting'
-import Login from '../login/login'
+import Login from '../../components/auth/Login/login'
 
 //routespath
 import routesPath from './routePaths'
 
 
 //test
-import IconButton from '../IconButton/iconButton'
 
 export interface RoutingProps extends PropsWithChildren{
 
