@@ -14,7 +14,7 @@ interface ILinkProps {
 }
 
 
-type LinkProps = ILinkProps & RouterDomLinkProps
+export type LinkProps = ILinkProps & RouterDomLinkProps
 
 const Link:React.FC<LinkProps>=({
     external,
