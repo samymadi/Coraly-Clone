@@ -24,17 +24,27 @@ const lightThemeObject = {
   paletteColor:{
     primary:{
       default:PaletteLight.primaryDefault,
+      hover:PaletteLight.primaryHover,
+      active:PaletteLight.primaryActive,
+      disabled:PaletteLight.primaryDisabled
       
       
     },
     secondary:{
-      default:PaletteLight.secondaryDefault
+      default:PaletteLight.secondaryDefault,
+      hover:PaletteLight.secondaryHover,
+      active:PaletteLight.secondaryActive,
+      disabled:PaletteLight.secondaryDisabled
     },
 
     neutral:{
       '90':"#464356",
       "70":"#6F6D7B",
       "80":"#5A5869",
+      "50":"#9897A1",
+      "10":"#EAEAEC",
+      "20":"#D6D5D9",
+      "100":"#312E43"
       
     },
 
