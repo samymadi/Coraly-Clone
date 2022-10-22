@@ -4,48 +4,62 @@ import React from 'react'
 import {
     Button, 
     ButtonProps, 
-    styled
+    IconButton, 
+    IconButtonProps, 
+    styled,
+    
 } from '@mui/material';
 
+import {
+  Theme,
+} from '@mui/material/styles';
 
 
-interface CustomButton {
 
+interface ICustomButtonIconLabel {
 }
 
-type CustomButtonIconProps = ButtonProps & CustomButton;
+export type CustomButtonIconLabelProps = ButtonProps & ICustomButtonIconLabel;
 
 
 
 
 
-const ButtonIcon:React.FC<CustomButtonIconProps> = ({
+const CustomButtonIconLabel:React.FC<CustomButtonIconLabelProps> = ({
   children,
   ...rest
 })=> {
-  return (
-    <CustomButton
-    variant='outlined'
-    size='large'
-    color="info"
-    {...rest}
-      >
-        {/* {children} */}
-        Type here
-    </CustomButton>
+
+ 
+
+    return (
+    <StyledCustomButton
+      color='primary'
+      variant='contained'
+      {...rest}
+        >
+        {children}
+    </StyledCustomButton>
   )
+  
 }
 
-export default ButtonIcon
+export default CustomButtonIconLabel
 
 
 
-const CustomButton  = styled(({children,...props}:ButtonProps)=>(
+
+//-----styles
+
+
+
+const StyledCustomButton  = styled(({children,...rest}:ButtonProps)=>(
     <Button
-        {...props}>
+        {...rest}>
             {children}
     </Button>
 ))(({theme})=>{
+  
 
   const {
     actionSecondary,
@@ -59,6 +73,7 @@ const CustomButton  = styled(({children,...props}:ButtonProps)=>(
 
 
   return{
+    //generic
     fontSize:'14px',
     fontWeight:'700',
     textTransform:'unset',
@@ -157,8 +172,5 @@ const CustomButton  = styled(({children,...props}:ButtonProps)=>(
       }
     },
 
-   
-    
-}
-  
+   }
 })
