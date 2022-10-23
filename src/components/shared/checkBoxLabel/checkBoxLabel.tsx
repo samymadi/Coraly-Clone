@@ -38,4 +38,18 @@ const LabelCheckBox = styled((props:FormControlLabelProps)=>
         
 (({theme})=>({
 
+  
+  "&.MuiFormControlLabel-root":{
+    marginRight:'0',
+
+  },
+
+  "& span":{
+    "&.MuiFormControlLabel-label":{
+      fontSize:'14px',
+      fontWeight:'400',
+      color:theme.paletteColor.neutral['100'],
+    }
+    
+  }
 }))

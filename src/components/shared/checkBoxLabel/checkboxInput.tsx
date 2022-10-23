@@ -41,10 +41,18 @@ export default CheckboxInput
 
 const CheckBox = styled( (props:CheckboxProps)=> 
     <Checkbox {...props}/>)(({theme})=>({
-      '&.Mui-checked': {
-        color:theme.paletteColor.primary.default,
+     
+      '&.MuiCheckbox-root':{
+        borderRaduis:'5px',
+        color:theme.paletteColor.neutral['40'],
+        
+        '&.Mui-checked': {
+          color:theme.paletteColor.primary.default,
+        },
       },
-      '&.Mui-root':{
-        borderRaduis:'3px'
+      '&.MuiCheckbox-root svg':{
+        width:'20px',
+        height:'20px'
       }
+      
     }))

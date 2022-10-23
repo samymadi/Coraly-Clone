@@ -81,6 +81,7 @@ const StyledCustomButton  = styled(({children,...rest}:ButtonProps)=>(
     padding:'0 12px',
     lineHeight:'18px',
     boxShadow:'none',
+    width:"100%",
 
     "&:hover":{
       boxShadow:'none',
@@ -120,10 +121,10 @@ const StyledCustomButton  = styled(({children,...rest}:ButtonProps)=>(
     },
 
     "&.MuiButton-sizeLarge":{
-      height:'40px',
+      minHeight:'40px',
     },
     "&.MuiButton-sizeMedium":{
-      height:'32px',
+      minHeight:'32px',
     },
 
 

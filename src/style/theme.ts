@@ -44,6 +44,7 @@ const lightThemeObject = {
       "50":"#9897A1",
       "10":"#EAEAEC",
       "20":"#D6D5D9",
+      "40":"#A5A5AA",
       "100":"#312E43"
       
     },

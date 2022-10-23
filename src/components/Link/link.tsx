@@ -26,12 +26,14 @@ const Link:React.FC<LinkProps>=({
     const {href,to,..._rest} = rest;
   return (
     external ? <a 
+                     style={{textDecoration:'none'}}
                     {...rest}>
                     {children}
                </a>  
              : 
             
             <RouterDomLink
+                style={{textDecoration:'none'}}
                 to={href}
                 {..._rest}>
                     {children}

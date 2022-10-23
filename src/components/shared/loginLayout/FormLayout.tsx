@@ -6,6 +6,7 @@ import React, {
 //material ui
 import {
     Stack,
+    StackProps
 } from '@mui/material';
 
 //styled engine
@@ -14,20 +15,22 @@ import styled from '@emotion/styled';
 //assets
 import {ReactComponent as Logo} from '../../../assets/logos/smallLogo.svg';
 
-export interface FormLayoutProps extends PropsWithChildren{
 
-}
-
-export type FormLayoutComponent  = React.FC<FormLayoutProps>
+export type FormLayoutComponent  = React.FC<StackProps>
 
 
 const  FormLayout:FormLayoutComponent = ({
     children,
+    ...rest
 })=> {
   return (
-    <FormLayoutStack>
+    <FormLayoutStack
+    {...rest}>
         <Logo 
-            style={{marginBottom:'60'}}/>
+            style={{
+                    marginBottom:'60',
+                    minHeight:'50px'
+                    }}/>
         {children}
     </FormLayoutStack>
   )
@@ -39,5 +42,6 @@ export default FormLayout
 
 const FormLayoutStack = styled(Stack)(()=>({
    flexDirection:'column',
-   padding:'80px 100px'
+   overflowY:'scroll',
+   padding:'60px 60px',
 }))

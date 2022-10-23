@@ -68,6 +68,7 @@ const CustomTextField = styled((props:TextFieldProps)=>
     } = theme.paletteColor
 
     return {
+        
     '& label':{
         fontSize:'14px',
         lineHeight:'14px',

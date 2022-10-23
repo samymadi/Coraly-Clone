@@ -8,7 +8,9 @@ import React,{
 //material ui
 import { 
     Stack,
-    StackProps
+    StackProps,
+    SxProps,
+    Theme
 } from '@mui/material'
 
 import {styled} from '@mui/material/styles';
@@ -22,9 +24,10 @@ import FormLayout from './FormLayout';
 
 //types
 interface LoginLayoutProps extends PropsWithChildren{
-   style?:StackProps,
-   backgroundWrapperStyle? : StackProps
+   style?:SxProps<Theme>,
+   backgroundWrapperStyle? : SxProps<Theme>
    background?:JSX.Element,
+   formLayoutStyle?:SxProps<Theme>
 
 }
 
@@ -34,17 +37,20 @@ const LoginLayout : LoginLayoutComponent = ({
     children,
     style,
     background,
-    backgroundWrapperStyle
+    backgroundWrapperStyle,
+    formLayoutStyle
 })=> {
   return (
     <LayoutStack
-        {...style}
+        sx={style}
     >
-      <FormLayout>
+      <FormLayout
+        sx={formLayoutStyle}
+      >
          {children}
       </FormLayout>
       <BackgroundImageWrapper
-          {...backgroundWrapperStyle}
+          sx={backgroundWrapperStyle}
       >
         {background}
       </BackgroundImageWrapper>
@@ -62,11 +68,12 @@ const LayoutStack = styled(Stack)(({theme})=>({
   inset:0,
   flexDirection:'row',
   height:'100vh',
-  flex:0.3
+  width:'100%',
 }))
 
 
 const BackgroundImageWrapper = styled(Stack)(({theme})=>({
     height:'100vh',
-    flex:0.7    
+    flex:0.75   
 }))
+
