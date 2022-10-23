@@ -1,6 +1,5 @@
 import React,{
     memo, 
-    PropsWithChildren
 } from 'react'
 
 
@@ -9,7 +8,9 @@ import {
     Typography,
     //----------------Types
     StackProps,
-    TypographyProps
+    TypographyProps,
+    SxProps,
+    Theme
 } from '@mui/material';
 
 
@@ -18,20 +19,22 @@ import {
 } from '@mui/material/styles';
 
 
-interface TitleDescTempProps extends PropsWithChildren{
+ interface ITitleDescTempProps {
   title:string | number
   description:string|number
-  containerStyle?:StackProps,
+  containerStyle?:SxProps<Theme>,
   titleStyle? :TypographyProps,
   descStyle?:TypographyProps
 
 }
 
 
+export type TitleDescTempProps = StackProps & ITitleDescTempProps
 
-type TitleDescTempComponent  = React.FC<TitleDescTempProps>
 
-const  TitleDescTemp:TitleDescTempComponent = ({
+
+
+const  TitleDescTemp:React.FC<TitleDescTempProps> = ({
   title,
   description,
   containerStyle,
@@ -40,7 +43,7 @@ const  TitleDescTemp:TitleDescTempComponent = ({
 })=>{
   return (
     <StackContainer
-        {...containerStyle}>
+        sx={containerStyle}>
         <TitleTypo
           {...titleStyle}>
           {title}

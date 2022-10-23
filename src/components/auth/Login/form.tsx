@@ -3,18 +3,22 @@ import React,{
 } from 'react'
 
 
-import { FormControl, styled } from '@mui/material'
-// import { styled } from '@mui/material'
 
 import TextFields from './textfields'
+import SessionCondition from './SessionCondition'
 
 
 
 function Form() {
   return (
-    <CustomFormControl>
+    <form
+      style={{
+        marginTop:"50px",
+        marginBottom:"25px"
+      }}>
             <TextFields/>
-    </CustomFormControl>
+            <SessionCondition/>
+    </form>
   )
 }
 
@@ -22,6 +26,3 @@ export default memo(Form)
 
 
 
-const CustomFormControl = styled(FormControl)(()=>({
-    marginTop:'50px'
-}))

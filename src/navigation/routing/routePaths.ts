@@ -1,5 +1,11 @@
 const Login = {
      LOGIN:'/auth/login',
+     CREATE_WORK_SPACE:"/auth/create-work-space",
+     EMAIL_CONFIRMATION_WORK_SPACE:"/auth/confirm-email",
+     COMPLETE_PROFILE:'/auth/complete-profile',
+     FORGOT_PASSWORD:'/auth/forgot-password',
+     EMAIL_SENT_PASSWORD:'/auth/forgot-password/email-sent',
+     INSERT_NEW_PASSWORD:'/auth/forgot-password/reset-password'
 }
 
 

@@ -20,7 +20,7 @@ interface ITextRedirectionProps{
 } 
 
 
-type TextRedirectionProps = ITextRedirectionProps & LinkProps 
+export type TextRedirectionProps = ITextRedirectionProps & LinkProps 
 
 const TextRedirection :React.FC<TextRedirectionProps> = ({
     label,
@@ -51,5 +51,6 @@ const StyledTypography = styled(({children,...rest}:TypographyProps)=>(
         color:theme.paletteColor.secondary.default,
         fontWeight:"600",
         fontSize:'14px',
-        lineHeight:'21px'
+        lineHeight:'21px',
+        
 }))
