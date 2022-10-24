@@ -14,14 +14,19 @@ import {
 
 
 //routes
-import DashboardRouting from './dashboardRouting'
-import Login from '../../components/auth/Login/login'
-import CreateWorkSpace from '../../components/auth/CreateWorkSpace/createWorkSpace'
-import confirmationEmailWorkSpace from '../../components/auth/confirmationEmailWorkSpace/confirmationEmailWorkSpace'
-import CompleteProfile from '../../components/auth/completProfile/completeProfile'
-import ForgotPassword from '../../components/auth/forgotPassword/forgotPassword'
-import EmailSentForgotPassword from '../../components/auth/EmilSentForgotPassword/emailSentForgotPassword'
-import ChangePassword from '../../components/auth/changePassword/changePassword'
+
+//auth
+import Login from '../../components/Pages/auth/Login/login'
+import CreateWorkSpace from '../../components/Pages/auth/CreateWorkSpace/createWorkSpace'
+import confirmationEmailWorkSpace from '../../components/Pages/auth/confirmationEmailWorkSpace/confirmationEmailWorkSpace'
+import CompleteProfile from '../../components/Pages/auth/completProfile/completeProfile'
+import ForgotPassword from '../../components/Pages/auth/forgotPassword/forgotPassword'
+import EmailSentForgotPassword from '../../components/Pages/auth/EmilSentForgotPassword/emailSentForgotPassword'
+import ChangePassword from '../../components/Pages/auth/changePassword/changePassword'
+
+//dashboard
+import dashboardLayout from '../../components/Pages/dashboard/dashboardLayout/dashboardLayout'
+
 //routespath
 import routesPath from './routePaths'
 
@@ -71,8 +76,9 @@ const routes = {
 
     dashboard:{
       path:routesPath.DASHBOARD.ROOT,
-      component: DashboardRouting
+      component: dashboardLayout
     }
+
         
 }
 
