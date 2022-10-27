@@ -7,6 +7,11 @@ import Form from './form'
 import CustomButtonIconLabel from '../../../shared/CustomButtonIconLabel/CustomButtonIconLabel'
 import TextTemplateCreateAccount from '../textTemplayeCreateAccount/textTemplateCreateAccount'
 
+
+//assets
+import AuthBackground from '../../../../assets/backgrounds/authBackground12.png';
+
+
 const _Login = 'Login';
 const DO_YOU_HAVE_ACCOUNT='Don’t you have an account?';
 const SIGN_UP_NOW =' Sign up now'
@@ -14,6 +19,7 @@ const SIGN_UP_NOW =' Sign up now'
 function Login() {
   return (
     <LoginLayout
+      background={AuthBackground}
       formLayoutStyle={{
         flex:0.3
       }}>
