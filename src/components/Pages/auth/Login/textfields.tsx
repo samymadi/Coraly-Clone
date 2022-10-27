@@ -7,7 +7,8 @@ import React, {
 } from '@mui/material/styles'
 
 import {
-    Stack
+    Stack, 
+    StackProps
 } from '@mui/material';
 
 
@@ -15,16 +16,19 @@ import Input from '../../../shared/input/input'
 
 
 
+
+
 const EMAIL='Email'
 const PASSWORD='Password'
 
-function TextFields() {
+const TextFields:React.FC<StackProps> = (props)=> {
 
     const [email,setEmail] = useState<string>('');
     const [password,setPassword] = useState<string>('');
     
   return (
-    <Container>
+    <Container  
+       {...props}>
                 <Input
                     sx={{marginBottom:'24px'}}
                     setValue={setEmail}

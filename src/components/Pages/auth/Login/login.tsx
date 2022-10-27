@@ -7,6 +7,7 @@ import Form from './form'
 import CustomButtonIconLabel from '../../../shared/CustomButtonIconLabel/CustomButtonIconLabel'
 import TextTemplateCreateAccount from '../textTemplayeCreateAccount/textTemplateCreateAccount'
 
+import routesPath from '../../../../navigation/routing/routePaths'
 
 //assets
 import AuthBackground from '../../../../assets/backgrounds/authBackground12.png';
@@ -34,7 +35,7 @@ function Login() {
         <TextTemplateCreateAccount
               label={DO_YOU_HAVE_ACCOUNT}
               textRedirection={{
-                href:'somewhare',
+                href:routesPath.CREATE_WORK_SPACE,
                 to:'somewhere',
                 label:SIGN_UP_NOW
               }}/>
