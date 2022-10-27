@@ -2,7 +2,9 @@ import React from 'react'
 
 
 import {
-    Stack, useTheme
+    Stack, 
+    useTheme,
+    StackProps
 } from '@mui/material';
 
 
@@ -20,9 +22,10 @@ interface  TextTemplateCreateAccountProps {
 
 }
 
-const  TextTemplateCreateAccount:React.FC<TextTemplateCreateAccountProps> = ({
+const  TextTemplateCreateAccount:React.FC<TextTemplateCreateAccountProps & StackProps> = ({
   label,
-  textRedirection
+  textRedirection,
+  ...rest
 })=> {
 
   const {
@@ -32,7 +35,8 @@ const  TextTemplateCreateAccount:React.FC<TextTemplateCreateAccountProps> = ({
   return (
     <Stack
         direction='row'
-        alignItems='center'>
+        alignItems='center'
+        {...rest}>
         <Typography
             sx={{
                 color:paletteColor.neutral['80'],

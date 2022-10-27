@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Children, useState } from 'react'
 
 
 import useBreadCurmbs from '../../../../utils/Customhooks/useBreadCrumbs'
@@ -13,10 +13,13 @@ import {
 
 import TitleDesc from './titleDesc';
 import ProcessList from './processList';
+import AddNewProcessModal from './addNewProcessModal';
 
 const PROCESS = 'Process'; 
 
 function Process() {
+
+    const [open,setOpen] = useState<boolean>(false);
 
     useBreadCurmbs({
         label:PROCESS,
@@ -25,10 +28,14 @@ function Process() {
     })
 
   return (
-    <Container
-      >
+    <Container>
         <TitleDesc/>
-        <ProcessList/>
+        <ProcessList
+          setOpen={setOpen}
+          />
+        <AddNewProcessModal
+          open={open}
+          setOpen={setOpen}/>
     </Container>
   )
 }

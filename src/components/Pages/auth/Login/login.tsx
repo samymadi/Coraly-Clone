@@ -27,7 +27,9 @@ function Login() {
         <TitleDesc/>
         <Form/>
         <CustomButtonIconLabel
-              sx={{marginBottom:'25px'}}
+              sx={{
+                marginBottom:'25px'
+              }}
               color='info'
               size='large'>
               {_Login}

@@ -4,7 +4,9 @@ import {
      styled,
      Typography as  MuiTypography,
      useTheme,
-     Button
+     Stack,
+     StackProps
+     
 } from '@mui/material'
 
 
@@ -13,14 +15,15 @@ import {ReactComponent as Plus} from '../../../../assets/icons/Plus.svg';
 const CREATE_NEW_PORCESS='Create a new process';
 
 
-function AddNewProcess() {
+function AddNewProcess(props:StackProps) {
 
     const {
         neutral
     } = useTheme().paletteColor;
 
   return (
-        <Container>
+        <Container
+            {...props}>
             <Plus
                 fill={neutral['70']}
                 width='30px'
@@ -39,7 +42,7 @@ export default AddNewProcess
 
 
 
-const Container =  styled('div')(({theme})=>({
+const Container =  styled(Stack)(({theme})=>({
     display:'flex',
     flexDirection:'column',
     alignItems:'center',

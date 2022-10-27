@@ -88,17 +88,13 @@ const Routing:RoutingComponent = ()=>{
   return (
     <Router>
         <Switch>
-
           {Object.values(routes).map((props,index)=>(
             <Route
                 {...props}
                 key={index}
             />
           ))}
-
         </Switch> 
-
-        
     </Router>
   )
 }
