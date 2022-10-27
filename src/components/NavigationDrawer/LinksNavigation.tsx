@@ -107,7 +107,7 @@ const LinksItems = [
 
 function LinksNavigation() {
 
-  const [selectedIndex,setSelectedIndex] = useState<number>(0);
+  const [selectedIndex,setSelectedIndex] = useState<number>(NaN);
 
 
   const handleSelect = (index:number)=>{

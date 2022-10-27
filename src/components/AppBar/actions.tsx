@@ -51,5 +51,5 @@ export default Actions
 const CustomStack = styled(Stack)(({theme})=>({
   flexDirection:'row',
   alingItems:'center',
-  gap:'28px',
+  gap:'15px',
 }))

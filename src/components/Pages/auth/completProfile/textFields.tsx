@@ -35,7 +35,8 @@ function TextFields() {
                 setValue={setState1}/>
             <CustomInput
                 label={SURNAME}
-                setValue={setState1}/>    
+                setValue={setState1}
+                />    
                 
         </WrapperStack>
 
@@ -59,14 +60,15 @@ export default TextFields
 
 const WrapperStack = styled(Stack)(({theme})=>({
     flexDirection:'row',
-    marginBottom:'25px'
+    justifyContent:'space-between',
+    marginBottom:'25px',
     
 }))
 
 const CustomInput = styled(Input)(({})=>({
-    
-    "&.MuiOutlinedInput-root":{
-        flex:0.8,
-        width:'30px !important'
+
+    "&.MuiTextField-root":{
+            color:'red',
+            width:'47%'
     }
 }))

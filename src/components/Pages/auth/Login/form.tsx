@@ -16,7 +16,10 @@ function Form() {
         marginTop:"50px",
         marginBottom:"25px"
       }}>
-            <TextFields/>
+            <TextFields
+              sx={{
+                marginBottom:'18px'
+              }}/>
             <SessionCondition/>
     </form>
   )

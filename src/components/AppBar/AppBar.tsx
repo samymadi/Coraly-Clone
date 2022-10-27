@@ -30,7 +30,7 @@ const CustomAppBar  = styled(MuiAppBar)(({theme})=>({
   flexDirection:"row",
   justifyContent:'space-between',
   alingItems:'center',
-  position:'static',
+  position:'relative',
   height:'64px',
   padding:'14px 24px ',
   boxShadow:`0px 2px 2px ${theme.paletteColor.neutral['20']}`,

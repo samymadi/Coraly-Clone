@@ -21,6 +21,7 @@ function TextFields() {
         <Input
             label={NEW_PASSWORD}
             setValue={setState1}
+            type='password'
             sx={{
                 marginBottom:'32px'
             }}
@@ -28,6 +29,7 @@ function TextFields() {
         <Input
             label={CONFIRM_NEW_PASSWORD}
             setValue={setState1}
+            type='password'
             />    
     </Stack>
   )
