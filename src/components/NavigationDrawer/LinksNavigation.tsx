@@ -112,8 +112,6 @@ function LinksNavigation() {
 
   const handleSelect = (index:number)=>{
     setSelectedIndex(index);
-    console.log(index);
-
   }
   
   return (

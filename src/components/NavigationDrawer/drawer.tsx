@@ -72,6 +72,9 @@ const Container  =  styled(Stack)(({theme})=>({
 const CustomDrawer =styled(MuiDrawer,{
     shouldForwardProp: (prop) => prop !== "open"
   })(({theme,open})=>({
+    "& ::-webkit-scrollbar ":{
+        display:'none',
+    },
     width: `${DRAWER_WIDTH}px`,
     maxWidth:`${DRAWER_WIDTH}px`,
     flexShrink: 0,

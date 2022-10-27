@@ -45,12 +45,12 @@ const  TitleDescTemp:React.FC<TitleDescTempProps> = ({
     <StackContainer
         sx={containerStyle}>
         <TitleTypo
-          {...titleStyle}>
+          sx={titleStyle}>
           {title}
         </TitleTypo>
 
         <DescTypo
-            {...descStyle}>
+            sx={descStyle}>
           {description}
         </DescTypo>
     </StackContainer>

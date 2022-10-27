@@ -42,11 +42,18 @@ const lightThemeObject = {
       "70":"#6F6D7B",
       "80":"#5A5869",
       "50":"#9897A1",
+      "60":"#83828E",
       "10":"#EAEAEC",
       "20":"#D6D5D9",
       "40":"#A5A5AA",
-      "100":"#312E43"
+      "100":"#312E43",
+       white:"#FFF",
       
+    },
+
+    backgroundColor:{
+      default1:'#F6F8FA',
+      default2:'rgba(49, 46, 67, 0.32)',
     },
 
     actionSecondary:{

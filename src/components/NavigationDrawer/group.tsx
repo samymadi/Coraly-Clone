@@ -4,17 +4,13 @@ import React,{
 
 import {
      styled,
-     Avatar
 } from '@mui/material'
 
 //compenents
 import Typography from '../shared/typography/typography'
 
 
-
-import { 
-    stringAvatar 
-} from '../../utils/helpersFunctions';
+import AvatarNameAbstraction from '../AvatarNameAbstraction/AvatarNameAbstraction';
 
 import useDrawer from '../../utils/Customhooks/useDrawer';
 
@@ -29,13 +25,9 @@ function Group() {
 
   return (
     <Container>
-        <CustomAvatar
-                variant='square'>
-                    <AvatarTypo>
-                            {stringAvatar(LASTING_DYNAMICS)}        
-                    </AvatarTypo>
-        </CustomAvatar>
-            
+
+        <AvatarNameAbstraction
+            label={LASTING_DYNAMICS}/>
         {open && 
         <Typography
                 sx={{
@@ -62,27 +54,3 @@ const Container = styled('div')(({})=>({
     alignItems:'center',
 }))
 
-
-const CustomAvatar = styled(Avatar)(({theme})=>({
-    width:'40px',
-    height:'40px',
-    borderRadius:'8px',
-    backgroundColor:theme.paletteColor.primary.disabled,
-    border:`1px solid ${theme.paletteColor.primary.default}`,
-
-    "&.MuiTypography-root":{
-        fontSize:'14px',
-        fontWeight:'bold',
-    }
-}))
-
-
-
-const AvatarTypo = styled(Typography)(({})=>({
-    color:'white',  
-    fontSize:'16px',
-    fontWeight:'600',
-    lineHeight:'18px',
-    marginLeft:'16px',
-    margin:'0',
-}))

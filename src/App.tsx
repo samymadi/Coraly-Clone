@@ -3,7 +3,6 @@ import {
    ThemeProvider 
 } from '@mui/material/styles';
 
-import './App.css';
 
 
 

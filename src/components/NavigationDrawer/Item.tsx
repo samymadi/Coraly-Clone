@@ -55,7 +55,9 @@ const Item:React.FC<ItempComponentProps> = ({
         <CustomListItemButton
           selected={selected}>
           <CustomListItemIcon
-            >
+            sx={{
+              marginRight:open ? '12px' :'0px' 
+            }}>
               {icon}
           </CustomListItemIcon>
           {open &&
@@ -87,7 +89,7 @@ const CustomListItem = styled(ListItem)(({theme})=>({
 const CustomListItemIcon = styled(ListItemIcon)(({theme})=>({
 
   minWidth:"fit-content",
-   marginRight:  "12px",
+  marginRight:"12px",
   "& svg":{
     fill:theme.paletteColor.neutral['10'],
   },
