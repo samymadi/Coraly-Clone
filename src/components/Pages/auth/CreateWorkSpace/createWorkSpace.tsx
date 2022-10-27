@@ -7,6 +7,13 @@ import Form from './form'
 import CustomButtonIconLabel from '../../../shared/CustomButtonIconLabel/CustomButtonIconLabel'
 import TextTemplateCreateAccount from '../textTemplayeCreateAccount/textTemplateCreateAccount'
 
+
+import routesPath from '../../../../navigation/routing/routePaths'
+
+//assets
+import AuthBackground2 from '../../../../assets/backgrounds/authBackground22.jpg';
+
+
 const CREATE_NEW_ACCOUNT ='Create now the account';
 const DO_YOU_HAVE_ACCOUNT='Do you have an account?'
 const SIGN_IN='Sign in'
@@ -14,6 +21,7 @@ const SIGN_IN='Sign in'
 function CreateWorkSpace() {
   return (
     <LoginLayout
+        background={AuthBackground2}
         formLayoutStyle={{
             flex:0.35
         }}
@@ -32,7 +40,7 @@ function CreateWorkSpace() {
         label={DO_YOU_HAVE_ACCOUNT}
         textRedirection={{
           label:SIGN_IN,
-          href:'somewhere',
+          href:routesPath.LOGIN,
           to:'somewhere'
         }}/>
 

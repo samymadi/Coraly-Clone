@@ -15,9 +15,6 @@ import {
 
 import {styled} from '@mui/material/styles';
 
-import {ReactComponent as LoginBackground } from '../../assets/backgrounds/authBackground3.svg';
-
-
 
 //components
 import FormLayout from './FormLayout';
@@ -26,7 +23,7 @@ import FormLayout from './FormLayout';
 interface LoginLayoutProps extends PropsWithChildren{
    style?:SxProps<Theme>,
    backgroundWrapperStyle? : SxProps<Theme>
-   background?:JSX.Element,
+   background?:string,
    formLayoutStyle?:SxProps<Theme>
 
 }
@@ -52,7 +49,12 @@ const LoginLayout : LoginLayoutComponent = ({
       <BackgroundImageWrapper
           sx={backgroundWrapperStyle}
       >
-        {background}
+            <img src={background}
+              style={{
+                height:'100%',
+                width:'100%',
+              }}
+               alt='background' />
       </BackgroundImageWrapper>
     </LayoutStack>
   )
@@ -64,16 +66,16 @@ export default memo(LoginLayout)
 
 
 const LayoutStack = styled(Stack)(({theme})=>({
-  position:'absolute',
-  inset:0,
+  // position:'absolute',
+  // inset:0,
   flexDirection:'row',
   height:'100vh',
-  width:'100%',
+  // width:'100%',
 }))
 
 
 const BackgroundImageWrapper = styled(Stack)(({theme})=>({
-    height:'100vh',
-    flex:0.75   
+    flex:0.7,
+       
 }))
 
