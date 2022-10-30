@@ -3,7 +3,6 @@ import React, {
     useContext
 } from "react";
 
-
 import { 
     BreadCrumbContext
 } from "../../components/breadCrumbsManager/breadCrumbsManager";
@@ -14,15 +13,14 @@ import {
 } from "../../components/AppBar/breadcrumbsItems";
 
 
-function useBreadCurmbs(element:BreadcrumbsItemProps){
+function useBreadCurmbs(element:BreadcrumbsItemProps,root?:boolean){
+
 
     const {
         setBreadCrumbsArray,
-        breadCrumbsArray
     } = useContext(BreadCrumbContext)
 
 
-    console.log(element,breadCrumbsArray);
     useEffect(()=>{
         onMount();
         return onUnMount;
@@ -30,12 +28,16 @@ function useBreadCurmbs(element:BreadcrumbsItemProps){
 
 
     const onMount = ()=>{
+        if(root) reset();   
         setBreadCrumbsArray && setBreadCrumbsArray(prec=>[...prec,element]);
     }
 
     const onUnMount = ()=>{
-        setBreadCrumbsArray && setBreadCrumbsArray(prec=>prec.filter(item=>item!==element));
+        if(!root) setBreadCrumbsArray && setBreadCrumbsArray(prec=>prec.filter(item=>item!==element));
     }   
+
+
+    const reset =()=>setBreadCrumbsArray && setBreadCrumbsArray([]);
 
     
 }
