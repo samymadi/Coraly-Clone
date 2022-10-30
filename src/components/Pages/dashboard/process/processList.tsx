@@ -62,12 +62,21 @@ const Processes = [
 
 ]
 
-function ProcessList() {
+function ProcessList({
+    setOpen,
+}:{setOpen:React.Dispatch<React.SetStateAction<boolean>>}) {
+
+
+  const handleOpenAddNewProcess =()=>{
+    setOpen(true);
+  }
   return (
     <Container>
-        <AddNewProcess/>
+        <AddNewProcess
+            onClick={handleOpenAddNewProcess}/>
+
         {Processes && Processes.map((props,index)=>(
-          <ProcessCard
+            <ProcessCard
               key={index}
               {...props}/>
         ))}

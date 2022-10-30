@@ -46,7 +46,6 @@ const routes = {
     login:{
       path:routesPath.LOGIN,
       component :Login
-                        
     },
     workspace:{
       path:routesPath.CREATE_WORK_SPACE,
@@ -88,17 +87,13 @@ const Routing:RoutingComponent = ()=>{
   return (
     <Router>
         <Switch>
-
           {Object.values(routes).map((props,index)=>(
             <Route
                 {...props}
                 key={index}
             />
           ))}
-
         </Switch> 
-
-        
     </Router>
   )
 }
