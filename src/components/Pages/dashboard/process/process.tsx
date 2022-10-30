@@ -25,7 +25,9 @@ function Process() {
         label:PROCESS,
         href:routesPath.DASHBOARD.PROCESSES,
         to:''
-    })
+    },
+    true
+    )
 
   return (
     <Container>

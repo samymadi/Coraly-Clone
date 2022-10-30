@@ -12,6 +12,7 @@ import {
 //routes paths
 import routesPath from './routePaths'
 import Process from '../../components/Pages/dashboard/process/process'
+import ProcessDetails from '../../components/Pages/dashboard/processDetails/processDetails'
 
 export interface DashbaordRoutingProps extends PropsWithChildren{
 
@@ -27,7 +28,12 @@ export type DashboardRoutingComponent  = React.FC<DashbaordRoutingProps>
 const routes = {
     process:{
       path:routesPath.DASHBOARD.PROCESSES,
-      component:Process
+      component:Process,
+      exact:true,
+    },
+    processDetails:{
+      path:`${routesPath.DASHBOARD.PROCESSES}/:id_process`,
+      component:ProcessDetails
     },
     team:{
       path:routesPath.DASHBOARD.TEAM,

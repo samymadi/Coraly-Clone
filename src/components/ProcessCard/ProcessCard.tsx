@@ -1,6 +1,7 @@
 import React, { 
     useMemo,
-    ReactFragment
+    Fragment,
+    memo
 } from 'react'
 
 
@@ -10,15 +11,21 @@ import {
     styled
 } from '@mui/material'; 
 
+import Link,{
+    LinkProps
+} from '../Link/link';
+
 import Tooltip from '../shared/tooltip/tooltip';
 import ProcessHeader from './ProcessHeader';
 import ProcessBody from './processBody';
 
 
 interface IProcessCardProps{
+    _id:number
     color:string
     text?:string | number,
-    private?:boolean
+    private?:boolean,
+    linkProps?:LinkProps
 }
 
 
@@ -30,29 +37,38 @@ const THIS_IS_PRIVATE_PROCESS = 'This is a private process';
 const  ProcessCard:React.FC<ProcessCardProps> = ({
     private :_private,
     color,
-    text
+    text,
+    linkProps
 
 })=> {
 
+
+    const wrapper = useMemo(()=> (_private?:boolean,children?:JSX.Element,props:LinkProps={href:'',to:''})=>{
+        if(_private) return <Fragment>{children}</Fragment>
+            else return <Link {...props}>{children}</Link>
+    },[]);
+
   return (
-    <Tooltip
-        title={_private && THIS_IS_PRIVATE_PROCESS}>
-        <Card
-            sx={{
-                backgroundColor:color
-            }}>
-            {_private && <ProcessHeader/> }   
-            <ProcessBody
-                sx={{
-                    top:!_private ? '31px':""
-                }}
-                text={text}/>
-        </Card>
-    </Tooltip>
+   wrapper(_private, <Tooltip
+                        title={_private && THIS_IS_PRIVATE_PROCESS}>
+                        <Card
+                            sx={{
+                                backgroundColor:color
+                            }}>
+                            {_private && <ProcessHeader/> }   
+                            <ProcessBody
+                                sx={{
+                                    top:!_private ? '31px':""
+                                }}
+                                text={text}/>
+                        </Card>
+                      </Tooltip>,
+            linkProps
+        )
   )
 }
 
-export default ProcessCard
+export default memo(ProcessCard)
 
 
 
