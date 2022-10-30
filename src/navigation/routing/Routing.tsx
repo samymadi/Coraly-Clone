@@ -46,7 +46,6 @@ const routes = {
     login:{
       path:routesPath.LOGIN,
       component :Login
-                        
     },
     workspace:{
       path:routesPath.CREATE_WORK_SPACE,
