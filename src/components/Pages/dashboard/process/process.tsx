@@ -50,5 +50,6 @@ const Container = styled(Stack)(({theme})=>({
     position:'absolute',
     inset:'0',
     backgroundColor:theme.paletteColor.backgroundColor.default1,
-    padding:'35px 20px'
+    padding:'35px 20px',
+
 }))

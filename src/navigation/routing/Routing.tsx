@@ -8,6 +8,7 @@ import {
     Route,
     BrowserRouter as Router,
     Switch,
+    Redirect
 
 } from 'react-router-dom'
 
@@ -86,6 +87,10 @@ const routes = {
 const Routing:RoutingComponent = ()=>{
   return (
     <Router>
+      <Route path='/'>
+        <Redirect to='/dashboard/processes'/>
+
+      </Route>
         <Switch>
           {Object.values(routes).map((props,index)=>(
             <Route

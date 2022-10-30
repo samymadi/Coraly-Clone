@@ -28,7 +28,6 @@ const  CustomIconButton:React.FC<CustomIconButtonProps> =({
   return (
     <StyledCustomIconButton
             color='secondary'
-            // variant='contained'
             {...rest}>
         {children}
     </StyledCustomIconButton>

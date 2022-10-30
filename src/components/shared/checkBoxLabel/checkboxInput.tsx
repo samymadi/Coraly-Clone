@@ -15,7 +15,7 @@ interface CheckBoxInput {
 }
 
 
-type CheckBoxInputProps = CheckBoxInput & CheckboxProps
+export type CheckBoxInputProps = CheckBoxInput & CheckboxProps
 
 const  CheckboxInput:React.FC<CheckBoxInputProps> = ({
   setValue,

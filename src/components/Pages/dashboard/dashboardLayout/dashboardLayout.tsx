@@ -40,7 +40,7 @@ const Container = styled(Stack)(({theme})=>({
 }))
 
 const MainContent  = styled('div')(({theme})=>({
-  flexGrow:1
+  flexGrow:1,
 }))
 
 
@@ -48,6 +48,9 @@ const ContentContainer = styled('div')(({theme})=>({
   position:'relative',
   height:'calc(100vh - 64px)',
   overflowY:'scroll',
+  "&::-webkit-scrollbar":{
+    display:'none',
+  }
 })) 
 
 

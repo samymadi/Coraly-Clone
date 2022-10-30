@@ -16,7 +16,17 @@ const PaletteLight = {
   secondaryDisabled:'#96E7DE',
 
 
-  actionSecondaryDefault:'#04385A'
+  actionSecondaryDefault:'#04385A',
+
+  accentColorSky:'#47BDFF',
+  accentColorPurple:'#6C47FF',
+  accentColorPink:'#FF47B5',
+  accentColorNeonGreen:'#30EF7C',
+  accentColorOrange:'#FF9F47',
+  accentColorAqua:'#2EF1CE',
+  accentColorYellow:'#F6D524',
+  accentColorMagenta:'#E547FF',
+
 }
 
 
@@ -58,6 +68,17 @@ const lightThemeObject = {
 
     actionSecondary:{
         default:PaletteLight.actionSecondaryDefault
+    },
+
+    accent:{
+      sky:PaletteLight.accentColorSky,
+      purple:PaletteLight.accentColorPurple,
+      pink:PaletteLight.accentColorPink,
+      neaoGreen:PaletteLight.accentColorNeonGreen,
+      orange:PaletteLight.accentColorOrange,
+      aqua:PaletteLight.accentColorAqua,
+      yellow:PaletteLight.accentColorYellow,
+      magenta:PaletteLight.accentColorMagenta
     }
     
     
