@@ -16,9 +16,12 @@ import {
     stringAvatar
 } from '../../utils/helpersFunctions'
 
+//types
+import { Text } from '../../_types/basicType'
+
 
 interface IAvatarNameAbstractionProps {
-    label:string
+    label:Text
     typograhyStyle?:SxProps<Theme>
 }
 

@@ -1,18 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import { 
     useParams 
 } from 'react-router-dom'
 
-import useBreadCurmbs from '../../../../utils/Customhooks/useBreadCrumbs'
-import routesPath from '../../../../navigation/routing/routePaths'
+import useBreadCurmbs from '../../../utils/Customhooks/useBreadCrumbs'
+import routesPath from '../../../navigation/routing/routePaths'
 
 
-import ChipCheckbox from '../../../ChipCheckbox/chipCheckbox'
-import ToolBar from '../../../toolBar/toolBar'
+import ToolBar from '../../toolBar/toolBar'
+import ContractsCollapse from './contractsCollapse/contractsCollapse'
 
 import { 
-  useTheme,
   styled,
   Stack, 
 } from '@mui/material'
@@ -37,6 +36,7 @@ function ProcessDetails() {
   return (
     <Layout>
       <ToolBar/>
+      <ContractsCollapse/>
     </Layout>
   )
 }
@@ -44,10 +44,7 @@ function ProcessDetails() {
 export default ProcessDetails
 
 
-const Layout = styled(Stack)(({})=>({
-  // position:"absolute",
-  // left:'0',
-  // right:'0',  
+const Layout = styled(Stack)(({})=>({ 
   "&::-webkit-scrollbar":{
     display:'none',
   }

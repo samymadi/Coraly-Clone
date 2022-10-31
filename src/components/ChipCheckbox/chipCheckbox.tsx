@@ -32,7 +32,7 @@ interface IChipCheckboxProps{
     label:string,
     postLabel?:string | number
     actifColor:string,
-    ChecboxIcon:any,
+    ChecboxIcon?:any,
 }
 
 
@@ -56,7 +56,7 @@ const  ChipCheckbox:React.FC<ChipCheckBoxProps> = ({
 
 
     const styledIcon = useMemo(()=>( 
-            <Icon
+    Icon && <Icon
                 style={{
                     width:'16px',
                     height:'16px',
@@ -73,21 +73,20 @@ const  ChipCheckbox:React.FC<ChipCheckBoxProps> = ({
   return (
     <CustomCheckBoxLabel
         sx={{
-                backgroundColor: value ? `${actifColor}${COLOR_OPCITY_HEXA}` :""
+            backgroundColor:value ?`${actifColor}${COLOR_OPCITY_HEXA}`:""
         }}
-
         label={<LabelContainer>
-                            <LabelTypography
-                            sx={{
-                                color:!value ? neutral['60'] : "" 
-                            }}
-                            >
-                                    {label} &nbsp;
-                            </LabelTypography>
-                            { isPostLabelVisible === true && <PostLabelTypography>
-                                                                {`: ${postLabel}`}    
-                                                            </PostLabelTypography>
-                            }
+                    <LabelTypography
+                    sx={{
+                        color:!value ? neutral['60'] : "" 
+                    }}
+                    >
+                        {label} &nbsp;
+                    </LabelTypography>
+                    { isPostLabelVisible === true && <PostLabelTypography>
+                                                        {`: ${postLabel}`}    
+                                                    </PostLabelTypography>
+                    }
                 </LabelContainer>}
 
         control={<CustomCheckBoxInput

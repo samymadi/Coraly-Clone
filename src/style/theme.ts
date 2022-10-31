@@ -83,10 +83,6 @@ const lightThemeObject = {
     
     
   },
-
- 
-  
-  backgroundImage:'',
   
   typography:{
     fontFamily:['Inter'].join(''),

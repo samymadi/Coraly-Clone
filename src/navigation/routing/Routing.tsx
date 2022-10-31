@@ -87,7 +87,7 @@ const routes = {
 const Routing:RoutingComponent = ()=>{
   return (
     <Router>
-      <Route path='/'>
+      <Route path='/' exact>
         <Redirect to='/dashboard/processes'/>
 
       </Route>

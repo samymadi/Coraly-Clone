@@ -12,7 +12,7 @@ import {
 //routes paths
 import routesPath from './routePaths'
 import Process from '../../components/Pages/dashboard/process/process'
-import ProcessDetails from '../../components/Pages/dashboard/processDetails/processDetails'
+import ProcessDetails from '../../components/Pages/processDetails/processDetails'
 
 export interface DashbaordRoutingProps extends PropsWithChildren{
 
