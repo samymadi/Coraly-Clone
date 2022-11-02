@@ -7,6 +7,8 @@ import Form from './form'
 
 //assets
 import AuthBackground3 from '../../../../assets/backgrounds/authBackground31.jpg';
+import {ReactComponent as Background} from '../../../../assets/backgrounds/authBackground1.svg';
+
 
 
 const CONFIRM_NEW_PASSWORD ='Confirm new password'
@@ -14,9 +16,9 @@ const CONFIRM_NEW_PASSWORD ='Confirm new password'
 function ChangePassword() {
   return (
     <LoginLayout  
-        background={AuthBackground3}
+        background={Background}
         formLayoutStyle={{
-            flex:0.3
+            flex:1
         }}>
             <TitleDesc/>
             <Form/>

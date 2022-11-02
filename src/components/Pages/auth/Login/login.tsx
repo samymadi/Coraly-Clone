@@ -11,6 +11,7 @@ import routesPath from '../../../../navigation/routing/routePaths'
 
 //assets
 import AuthBackground from '../../../../assets/backgrounds/authBackground12.png';
+import {ReactComponent as Background} from '../../../../assets/backgrounds/authBackground3.svg';
 
 
 const _Login = 'Login';
@@ -20,10 +21,11 @@ const SIGN_UP_NOW =' Sign up now'
 function Login() {
   return (
     <LoginLayout
-      background={AuthBackground}
+      background={Background}
       formLayoutStyle={{
-        flex:0.3
+        flex:1
       }}>
+        
         <TitleDesc/>
         <Form/>
         <CustomButtonIconLabel

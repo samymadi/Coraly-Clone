@@ -5,15 +5,17 @@ import {ReactComponent as ConfirmationImage} from '../../../../assets/Confirmati
 
 //assets
 import AuthBackground3 from '../../../../assets/backgrounds/authBackground31.jpg';
+import {ReactComponent as Background} from '../../../../assets/backgrounds/authBackground1.svg';
+
 
 
 
 function EmailSentForgotPassword() {
   return (
     <LoginLayout
-        background={AuthBackground3}
+        background={Background}
         formLayoutStyle={{
-            flex:0.3
+            flex:1
         }}>
         <TitleDesc/>
         <ConfirmationImage/>

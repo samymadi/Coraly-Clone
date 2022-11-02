@@ -12,6 +12,8 @@ import routesPath from '../../../../navigation/routing/routePaths'
 
 //assets
 import AuthBackground2 from '../../../../assets/backgrounds/authBackground22.jpg';
+import {ReactComponent as Background} from '../../../../assets/backgrounds/authBackground2.svg';
+
 
 
 const CREATE_NEW_ACCOUNT ='Create now the account';
@@ -21,9 +23,9 @@ const SIGN_IN='Sign in'
 function CreateWorkSpace() {
   return (
     <LoginLayout
-        background={AuthBackground2}
+        background={Background}
         formLayoutStyle={{
-            flex:0.35
+            flex:1
         }}
         backgroundWrapperStyle={{
             flex:0.65

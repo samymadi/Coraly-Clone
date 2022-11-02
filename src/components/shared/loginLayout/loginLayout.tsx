@@ -1,6 +1,8 @@
 import React,{
+  FunctionComponent,
     memo,
     PropsWithChildren,
+    SVGProps,
 } from 'react'
 
 
@@ -23,7 +25,7 @@ import FormLayout from './FormLayout';
 interface LoginLayoutProps extends PropsWithChildren{
    style?:SxProps<Theme>,
    backgroundWrapperStyle? : SxProps<Theme>
-   background?:string,
+   background:FunctionComponent<SVGProps<SVGSVGElement>>,
    formLayoutStyle?:SxProps<Theme>
 
 }
@@ -33,7 +35,7 @@ type LoginLayoutComponent = React.FC<LoginLayoutProps>
 const LoginLayout : LoginLayoutComponent = ({
     children,
     style,
-    background,
+    background:Background,
     backgroundWrapperStyle,
     formLayoutStyle
 })=> {
@@ -46,16 +48,14 @@ const LoginLayout : LoginLayoutComponent = ({
       >
          {children}
       </FormLayout>
-      <BackgroundImageWrapper
+      {/* <BackgroundImageWrapper
           sx={backgroundWrapperStyle}
-      >
-            <img src={background}
-              style={{
-                height:'100%',
-                width:'100%',
-              }}
-               alt='background' />
-      </BackgroundImageWrapper>
+      > */}
+            <Background
+            style={{}}
+              />
+
+      {/* </BackgroundImageWrapper> */}
     </LayoutStack>
   )
 }
@@ -76,6 +76,5 @@ const LayoutStack = styled(Stack)(({theme})=>({
 
 const BackgroundImageWrapper = styled(Stack)(({theme})=>({
     flex:0.7,
-       
 }))
 

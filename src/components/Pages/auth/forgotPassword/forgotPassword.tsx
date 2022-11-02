@@ -11,6 +11,8 @@ import routesPath from '../../../../navigation/routing/routePaths'
 
 //assets
 import AuthBackground3 from '../../../../assets/backgrounds/authBackground31.jpg';
+import {ReactComponent as Background} from '../../../../assets/backgrounds/authBackground2.svg';
+
 
 
 
@@ -21,9 +23,9 @@ const RESET_PASSWORD ='Reset Password';
 function ForgotPassword() {
   return (
     <LoginLayout
-        background={AuthBackground3}
+        background={Background}
         formLayoutStyle={{
-            flex:0.3
+            flex:1
         }}>
         <TitleDesc/>  
         <Form/>

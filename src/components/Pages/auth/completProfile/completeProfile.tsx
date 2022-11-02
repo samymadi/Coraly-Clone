@@ -8,6 +8,8 @@ import Form from './form'
 
 
 import AuthBackground2 from '../../../../assets/backgrounds/authBackground22.jpg';
+import {ReactComponent as Background} from '../../../../assets/backgrounds/authBackground3.svg';
+
 
 
 const COMPLETE_NOW ='Complete now';
@@ -15,9 +17,9 @@ const COMPLETE_NOW ='Complete now';
 function CompleteProfile() {
   return (
     <LoginLayout
-        background={AuthBackground2}
+        background={Background}
         formLayoutStyle={{
-            flex:0.35
+            flex:1
         }}
         backgroundWrapperStyle={{
             flex:0.65
