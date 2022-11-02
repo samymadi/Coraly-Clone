@@ -11,7 +11,7 @@ import {
 import Phase2Form from './Phase2Form';
 import NewContractForm from './NewContractForm';
 import StartForm from './StartForm';
-import Typography from '../../../shared/typography/typography';
+import Typography from '../../../../shared/typography/typography';
 
 
 const Field_Phase ='Fields’ Phase'

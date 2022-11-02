@@ -11,8 +11,8 @@ import {
   styled,
 } from '@mui/material';
 
-import CoralyModal from '../../CoralyModal/CoralyModal'
-import HeaderModal from '../../CoralyModal/headerModal';
+import CoralyModal from '../../../CoralyModal/CoralyModal'
+import HeaderModal from '../../../CoralyModal/headerModal';
 import ActionsHeader from './actionsHeader';
 import Footer from '../footer/footer';
 import AddNewContractsbody from '../body/AddNewContractsbody';

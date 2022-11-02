@@ -4,13 +4,13 @@ import React, {
 
 
 
-import Select from '../../select/select';
+import Select from '../../../select/select';
 import {
     useTheme
 } from '@mui/material'; 
 
 
-import {ReactComponent as Account} from '../../../assets/icons/account.svg';
+import {ReactComponent as Account} from '../../../../assets/icons/account.svg';
 
 
 const SELECT_VENDORS = 'Select vendors';

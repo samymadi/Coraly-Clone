@@ -3,9 +3,9 @@ import React,{
 } from 'react'
 
 
-import FormCollapse from '../../../formCollapse/formCollapse'
+import FormCollapse from '../../../../formCollapse/formCollapse'
 import Container from './Container'
-import Input from '../../../shared/input/input'
+import Input from '../../../../shared/input/input'
 
 
 const START_DATE ='Start date'

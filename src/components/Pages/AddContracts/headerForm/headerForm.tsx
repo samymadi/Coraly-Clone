@@ -10,14 +10,14 @@ import {
 
 //components
 import AvatarGroupContracts from './avatarGroupContracts'
-import IconLabel from '../../shared/iconLabel/iconLabel'
+import IconLabel from '../../../shared/iconLabel/iconLabel'
 import TicketChipGroup from './TicketChipGroup'
 import ChapterSelect from './ChapterSelect'
 import VendorSelect from './VendorsSelect'
-import Divider from '../../divider/divider'
+import Divider from '../../../divider/divider'
 
 //assets
-import {ReactComponent as Calendar} from '../../../assets/icons/Date.svg';
+import {ReactComponent as Calendar} from '../../../../assets/icons/Date.svg';
 
 function HeaderForm() {
 

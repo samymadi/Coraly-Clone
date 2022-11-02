@@ -3,8 +3,8 @@ import React from 'react'
 
 
 //components
-import AvatarGroup from '../../AvatarGroup/avatarGroup'
-import AvatarNameAbstractionStyle2 from '../../AvatarNameAbstraction/AvatarNameAbstractionStyle2'
+import AvatarGroup from '../../../AvatarGroup/avatarGroup'
+import AvatarNameAbstractionStyle2 from '../../../AvatarNameAbstraction/AvatarNameAbstractionStyle2'
 import GroupWithAddActions from './groupWithAddActions'
 
 

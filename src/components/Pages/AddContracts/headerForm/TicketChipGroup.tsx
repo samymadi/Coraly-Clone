@@ -2,7 +2,7 @@ import React from 'react'
 
 
 import GroupWithAddActions from './groupWithAddActions'
-import Chip from '../../chip/chip'
+import Chip from '../../../chip/chip'
 import { useTheme } from '@mui/material'
 
 
