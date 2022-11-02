@@ -5,7 +5,7 @@ import {
     IconButtonProps
 } from '@mui/material';
 
-import IconButton from '../shared/iconButton/iconButton'
+import IconButton from '../../shared/iconButton/iconButton'
 
 function ContractsIconButton(props:IconButtonProps) {
   return (

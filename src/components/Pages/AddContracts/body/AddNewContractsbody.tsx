@@ -11,7 +11,7 @@ import {
 //components 
 import MainForm from './mainForm/mainForm';
 import FieldPhaseForm from './fieldPhaseForm/FieldPhaseForm';
-import Divider from '../../divider/divider';
+import Divider from '../../../divider/divider';
 
 function AddNewContractsbody(props:StackProps) {
   return (

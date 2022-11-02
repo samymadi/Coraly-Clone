@@ -10,7 +10,7 @@ import routesPath from '../../../navigation/routing/routePaths'
 
 import ToolBar from '../../toolBar/toolBar'
 import ContractsCollapse from './contractsCollapse/contractsCollapse'
-import AddContractsModal from '../../AddContracts/Modal/AddContractsModal'
+import AddContractsModal from '../AddContracts/Modal/AddContractsModal'
 
 //utils
 import { 

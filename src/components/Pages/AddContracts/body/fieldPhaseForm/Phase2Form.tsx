@@ -4,8 +4,8 @@ import React,{
 } from 'react'
 
 
-import FormCollapse from '../../../formCollapse/formCollapse'
-import Input from '../../../shared/input/input'
+import FormCollapse from '../../../../formCollapse/formCollapse'
+import Input from '../../../../shared/input/input'
 import Container from './Container';
 
 

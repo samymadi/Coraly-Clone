@@ -3,9 +3,9 @@ import React from 'react'
 //components
 import GroupWithActions,{
     GroupWithActionsProps
-} from '../../groupWithActions/groupWithActions'
+} from '../../../groupWithActions/groupWithActions'
 
-import IconButton from '../../shared/iconButton/iconButton'
+import IconButton from '../../../shared/iconButton/iconButton'
 
 
 //material ui
@@ -17,7 +17,7 @@ import {
 
 
 //assets
-import {ReactComponent as Add} from '../../../assets/icons/Add_New.svg'; 
+import {ReactComponent as Add} from '../../../../assets/icons/Add_New.svg'; 
 
 
 function GroupWithAddActions({

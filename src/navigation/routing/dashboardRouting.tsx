@@ -13,7 +13,7 @@ import {
 import routesPath from './routePaths'
 import Process from '../../components/Pages/dashboard/process/process'
 import ProcessDetails from '../../components/Pages/processDetails/processDetails'
-import AddContractsModal from '../../components/AddContracts/Modal/AddContractsModal'
+import AddContractsModal from '../../components/Pages/AddContracts/Modal/AddContractsModal'
 
 export interface DashbaordRoutingProps extends PropsWithChildren{
 

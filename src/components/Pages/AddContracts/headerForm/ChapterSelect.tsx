@@ -4,13 +4,13 @@ import React, {
 
 
 
-import Select from '../../select/select';
+import Select from '../../../select/select';
 import {
     useTheme
 } from '@mui/material'; 
 
 
-import {ReactComponent as Standard} from '../../../assets/icons/Standard.svg';
+import {ReactComponent as Standard} from '../../../../assets/icons/Standard.svg';
 
 
 const CHOOSE_CHAPTER = 'Choose chapter';

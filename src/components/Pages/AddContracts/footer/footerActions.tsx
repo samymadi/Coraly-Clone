@@ -6,7 +6,7 @@ import {
 
 
 
-import CustomButtonIconLabel from '../../shared/CustomButtonIconLabel/CustomButtonIconLabel';
+import CustomButtonIconLabel from '../../../shared/CustomButtonIconLabel/CustomButtonIconLabel';
 
 
 const CANCEL='Cancel';

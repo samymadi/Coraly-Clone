@@ -1,6 +1,6 @@
 import { useTheme } from '@mui/material'
 import React from 'react'
-import TitleDescTemp from '../../shared/titleDescTemp'
+import TitleDescTemp from '../../../shared/titleDescTemp'
 
 const FASE_ID ='Fase ID: '
 

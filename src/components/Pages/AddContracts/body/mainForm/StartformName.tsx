@@ -2,8 +2,8 @@ import React, {
     useState 
 } from 'react'
 
-import FormLayoutguidLine from '../../../formLayoutGuidLine/formLayoutGuidLine'
-import Input from '../../../shared/input/input'
+import FormLayoutguidLine from '../../../../formLayoutGuidLine/formLayoutGuidLine'
+import Input from '../../../../shared/input/input'
 
 
 const  STARTFORM_NAME='Startform Name'
