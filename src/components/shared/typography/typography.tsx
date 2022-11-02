@@ -36,5 +36,5 @@ const StyledTypography = styled(({children,...rest}:TypographyProps)=>(
         {children}
     </TypographyMaterial>
 ))(({theme})=>({
-
+    color:theme.paletteColor.neutral['90']
 }))
