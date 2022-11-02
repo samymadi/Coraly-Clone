@@ -1,9 +1,38 @@
-import React from 'react'
+import React, { Fragment, PropsWithChildren } from 'react'
 
-function DddContractsPanel() {
+
+
+
+
+import {
+  Stack,
+  styled 
+} from '@mui/material'
+
+
+interface IAddContractsPanel extends PropsWithChildren {
+  index: number;
+  value: number;
+}
+
+
+function AddContractsPanel({
+  children,
+  index,
+  value,
+}:IAddContractsPanel) {
   return (
-    <div>DddContractsPanel</div>
+    <CustomTabPanel>
+        {value===index  && (<Fragment>{children}</Fragment>)}
+        
+    </CustomTabPanel>
   )
 }
 
-export default DddContractsPanel
+export default AddContractsPanel
+
+
+
+const CustomTabPanel= styled(Stack)(({theme})=>({
+  
+}))
