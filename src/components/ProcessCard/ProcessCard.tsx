@@ -21,9 +21,9 @@ import ProcessBody from './processBody';
 
 
 interface IProcessCardProps{
-    _id:number
+    id:number
     color:string
-    text?:string | number,
+    name?:string | number,
     private?:boolean,
     linkProps?:LinkProps
 }
@@ -37,7 +37,7 @@ const THIS_IS_PRIVATE_PROCESS = 'This is a private process';
 const  ProcessCard:React.FC<ProcessCardProps> = ({
     private :_private,
     color,
-    text,
+    name,
     linkProps
 
 })=> {
@@ -60,7 +60,7 @@ const  ProcessCard:React.FC<ProcessCardProps> = ({
                                 sx={{
                                     top:!_private ? '31px':""
                                 }}
-                                text={text}/>
+                                text={name}/>
                         </Card>
                       </Tooltip>,
             linkProps

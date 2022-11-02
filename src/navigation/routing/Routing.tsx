@@ -1,6 +1,7 @@
 import React,{
     memo,
     PropsWithChildren,
+    useEffect,
 } from 'react'
 
 // react router
@@ -16,7 +17,6 @@ import {
 
 //routes
 
-//auth
 import Login from '../../components/Pages/auth/Login/login'
 import CreateWorkSpace from '../../components/Pages/auth/CreateWorkSpace/createWorkSpace'
 import confirmationEmailWorkSpace from '../../components/Pages/auth/confirmationEmailWorkSpace/confirmationEmailWorkSpace'
@@ -33,6 +33,8 @@ import routesPath from './routePaths'
 
 
 //test
+
+
 
 export interface RoutingProps extends PropsWithChildren{
 
@@ -85,6 +87,9 @@ const routes = {
 
 
 const Routing:RoutingComponent = ()=>{
+
+ 
+
   return (
     <Router>
       <Route path='/' exact>

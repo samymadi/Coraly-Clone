@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 
 import {
     Stack,
     styled,
-    IconButton as MuiIconButton,
-    useTheme
 } from '@mui/material';
+
+
+import Link from '../Link/link';
+import routesPath from '../../navigation/routing/routePaths';
 
 
 import {ReactComponent as Setting} from '../../assets/icons/Setting.svg';
@@ -15,10 +17,16 @@ import {ReactComponent as Vector3} from '../../assets/icons/Vector3.svg';
 import {ReactComponent as Vector4} from '../../assets/icons/Vector4.svg';
 import {ReactComponent as Vector5} from '../../assets/icons/Vector5.svg';
 
-import IconButton from '../IconButton/iconButton';
+import LabelButton from '../IconButton/iconButton';
+
+import IconButton from '../shared/iconButton/iconButton';
 
 //test
 import Menu from '../shared/Menu/menu';
+
+import { 
+  useHistory 
+} from 'react-router-dom';
 
 
 const ADD ='Add';
@@ -26,49 +34,49 @@ const ADD ='Add';
 
 function Actions() {
 
+
   const {
-    neutral
-  } =useTheme().paletteColor;
-
-
+    push,
+    replace
+  } = useHistory();
 
   return (
     <Container>
       <Menu
         open={true}
         >
-        <MuiIconButton>
+        <IconButton>
               <Vector5
-                fill={neutral['60']}
                 />
-        </MuiIconButton>    
+        </IconButton>    
       </Menu>
-        <MuiIconButton>
+        <IconButton>
             <Vector4
-              fill={neutral['60']}
               />
-        </MuiIconButton>    
-        <MuiIconButton>
+        </IconButton>    
+        <IconButton>
             <Vector3
-              fill={neutral['60']}
               />
-        </MuiIconButton>    
-        <MuiIconButton>
+        </IconButton>    
+        <IconButton>
             <Vector2
-              fill={neutral['60']}
               />
-        </MuiIconButton>    
-        <MuiIconButton>
+        </IconButton>    
+        <IconButton>
             <Setting
-              fill={neutral['60']}
               />
-        </MuiIconButton>   
+        </IconButton>   
 
-        <IconButton
-            color='primary'
-            iconName='LeftAdd'
-            size='medium'
-            label={ADD}/> 
+          <Link
+            href={routesPath.DASHBOARD.CREATE_CONTRACT}
+            to=''>
+              <LabelButton
+              onClick={()=>replace(routesPath.DASHBOARD.CREATE_CONTRACT)}
+              color='primary'
+              iconName='LeftAdd'
+              size='medium'
+              label={ADD}/> 
+            </Link>
                 
     </Container>
   )

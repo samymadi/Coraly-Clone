@@ -4,7 +4,6 @@ import React from 'react'
 import {
     styled,
     TableRow as MuiTableRow ,
-    TableRowProps,
 }   from '@mui/material';
 
 
@@ -13,7 +12,7 @@ import AvatarText from './avatarText';
 import TypoCell from './TypoCell';
 
 function TableRow({
-    id,
+    number,
     name,
     phone,
     ticket,
@@ -29,7 +28,7 @@ function TableRow({
                 <TableCell 
                     width='160px'>
                     <TypoCell>
-                        {id}
+                        {number}
                     </TypoCell>     
                 </TableCell>   
                 <TableCell 

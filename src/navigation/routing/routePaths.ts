@@ -19,7 +19,7 @@ const Dashboard ={
       AUTOMATION:'/dashboard/automations',
       SELLERS:'/dashboard/sellers',
       SUPPORT:'/dashboard/support',
-      CREATE_CONTRACT:'/dashboard/processes/?action=create_contracts',
+      CREATE_CONTRACT:`/dashboard/processes/1?action=create_contracts`,
       LOGOUT:Login.LOGIN
 }
 

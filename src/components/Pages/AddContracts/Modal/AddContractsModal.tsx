@@ -1,7 +1,6 @@
 import React,{
   useEffect,
   useState,
-  Fragment
 } from 'react'
 
 
@@ -11,6 +10,8 @@ import {
   styled,
 } from '@mui/material';
 
+import useAdvancedRouting from '../../../../utils/Customhooks/useAdvancedRouting';
+
 import CoralyModal from '../../../CoralyModal/CoralyModal'
 import HeaderModal from '../../../CoralyModal/headerModal';
 import ActionsHeader from './actionsHeader';
@@ -18,10 +19,25 @@ import Footer from '../footer/footer';
 import AddNewContractsbody from '../body/AddNewContractsbody';
 
 
+
 const EMAIL='Courtney@mail.com'
 
 function AddContractsModal() {
+  
+
   const [state,setState] = useState<boolean>(true);
+
+  const {
+    removeResearchParams
+  } = useAdvancedRouting(); 
+
+
+
+  useEffect(()=>{
+    if(!state) {
+      removeResearchParams('action');
+    }
+  },[state])
 
   return (
     <CoralyModal

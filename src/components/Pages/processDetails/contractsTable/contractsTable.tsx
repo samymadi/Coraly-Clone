@@ -1,4 +1,6 @@
-import React from 'react'
+import React,{
+  useEffect,
+} from 'react'
 
 
 import {
@@ -9,26 +11,33 @@ import {
 
 import TableRow from './tableRow';
 
-const createData  =(id:string,name:string,phone:string,ticket:string,name2:string,date:string)=>({
-  id,
-  name,
-  phone,
-  ticket,
-  name2,
-  date
-})
+import { 
+  getContracts 
+} from '../../../../store/contract/contract.actions';
 
-const data = new Array(15).fill(createData('VOD-153','Theresa Webb',"+39  065262123","IT069823456","Alessandro Durni",'3/25/2021'))
-  
+import { 
+  useSelector 
+} from 'react-redux';
+
+import useThunkdDispatcher from '../../../../utils/Customhooks/useThunkdDispatcher';
 
 
 
 function ContractsTable() {
+
+  const contracts = useSelector((state:any)=>state.contract.contracts)
+  const thunkDispatcher = useThunkdDispatcher();
+
+  console.log(contracts);
+
+  useEffect(()=>{
+    thunkDispatcher(getContracts());
+  },[])
   return (
     <CustomTable>
         
         <TableBody>
-          {data.map((data:any,index:number)=>(
+          {contracts && contracts.map((data:any,index:number)=>(
             <TableRow
               key={data.id}
               {...data}/>
