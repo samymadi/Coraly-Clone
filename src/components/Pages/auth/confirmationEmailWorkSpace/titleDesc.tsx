@@ -9,7 +9,7 @@ const CHECK_EMAIL_WORK_SPACE='Check your email inbox.We sent you a confirmation 
 function TitleDesc() {
   return (
     <TitleDescTemp
-            containerStyle={{
+            sx={{
                 marginBottom:'56px'
             }}    
             title={YOUR_WORK_SPACE_IS_READY}

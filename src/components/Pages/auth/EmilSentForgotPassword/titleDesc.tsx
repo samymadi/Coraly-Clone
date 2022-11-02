@@ -10,7 +10,7 @@ const EMAIL_WAS_SENT_DESC ='Check your email inbox.We sent you an email to edit 
 function TitleDesc() {
   return (
     <TitleDescTemp
-        containerStyle={{
+        sx={{
             marginBottom:'50px'
         }}
         title={EMAIL_WAS_SENT}

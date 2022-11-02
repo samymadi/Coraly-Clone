@@ -9,7 +9,7 @@ const DO_YOU_FORGOT_PASSWORD_DESC ='Insert your email and we will send you a lin
 function TitleDesc() {
   return (
     <TitleDescTemp
-        containerStyle={{
+        sx={{
           marginBottom:'50px'
         }}
         title={DO_YOU_FORGOT_PASSWORD}

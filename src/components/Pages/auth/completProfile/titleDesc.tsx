@@ -10,7 +10,7 @@ const INSERT__INFO='Insert all your info to proceed with your workspace';
 function TitleDesc() {
   return (
     <TitleDescTemp
-            containerStyle={{
+            sx={{
                 marginBottom:'45px'
             }}
             title={COMPLETE_YOUR_PROFILE}

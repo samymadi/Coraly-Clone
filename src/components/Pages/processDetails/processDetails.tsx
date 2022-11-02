@@ -10,18 +10,35 @@ import routesPath from '../../../navigation/routing/routePaths'
 
 import ToolBar from '../../toolBar/toolBar'
 import ContractsCollapse from './contractsCollapse/contractsCollapse'
+import AddContractsModal from '../../AddContracts/Modal/AddContractsModal'
+
+//utils
+import { 
+  getSeachParams 
+} from '../../../utils/helpersFunctions'
 
 import { 
   styled,
   Stack, 
 } from '@mui/material'
 
-//assets
+
+//actions
+const CREATE_CONTRACTS ='create_contracts';
 
 
 
-function ProcessDetails() {
 
+
+function ProcessDetails(props:any) {
+
+
+    const {
+      search
+    } = props.location
+
+    const mountAddContracts = getSeachParams(search).value.toLowerCase() === CREATE_CONTRACTS;
+  
     const {
         id_process
     } = useParams<{id_process:string}>();
@@ -37,6 +54,7 @@ function ProcessDetails() {
     <Layout>
       <ToolBar/>
       <ContractsCollapse/>
+      {mountAddContracts && <AddContractsModal/> }
     </Layout>
   )
 }

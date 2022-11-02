@@ -13,7 +13,7 @@ function TitleDesc() {
     <TitleDescTemp
         title={WELCOME}
         description={PROCESS_DESC}
-        containerStyle={{
+        sx={{
             width:'40%',
             marginBottom:'24px'
         }}

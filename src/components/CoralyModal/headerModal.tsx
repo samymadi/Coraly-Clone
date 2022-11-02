@@ -39,9 +39,9 @@ export default HeaderModal
 
 
 const StyledStack = styled(Stack)(()=>({
-    flexDirection:'column',
+    flexDirection:'row',
     justifyContent:'space-between',
-    marginBottom:'24px',
+    marginBottom:'8px',
 }))
 
 

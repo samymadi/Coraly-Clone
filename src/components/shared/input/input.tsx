@@ -68,6 +68,7 @@ const CustomTextField = styled((props:TextFieldProps)=>
     } = theme.paletteColor
 
     return {
+        width:'100%',
         
     '& label':{
         fontSize:'14px',
@@ -86,7 +87,7 @@ const CustomTextField = styled((props:TextFieldProps)=>
     '& .MuiOutlinedInput-root': {
         borderRadius:'8px',
         height:'42px',
-        width:'100%',
+        
         
         "& input":{
             fontSize:'14px',

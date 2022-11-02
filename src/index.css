@@ -17,20 +17,21 @@ code {
 
 /* width */
 ::-webkit-scrollbar {
-      width: 5px;
+      width: 6px;
+      height: 6px;
+      
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #EAEAEC;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #C1C0C7;
+  border-radius: 200px;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
+

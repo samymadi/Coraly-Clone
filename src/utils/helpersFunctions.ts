@@ -9,7 +9,17 @@ const stringAvatar = (name: Text)=> {
 
 
 
+const getSeachParams = (search:string)=>{
+        return {
+            name:search.slice(search.indexOf('?')+1,search.indexOf("=")),
+            value:search.slice(search.indexOf('=')+1)
+        }
+}
+
+
+
 
 export {
-    stringAvatar
+    stringAvatar,
+    getSeachParams
 }  

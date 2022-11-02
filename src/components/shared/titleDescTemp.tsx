@@ -22,7 +22,6 @@ import {
  interface ITitleDescTempProps {
   title:string | number
   description:string|number
-  containerStyle?:SxProps<Theme>,
   titleStyle? :TypographyProps,
   descStyle?:TypographyProps
 
@@ -37,13 +36,13 @@ export type TitleDescTempProps = StackProps & ITitleDescTempProps
 const  TitleDescTemp:React.FC<TitleDescTempProps> = ({
   title,
   description,
-  containerStyle,
   titleStyle,
-  descStyle
+  descStyle,
+  ...rest
 })=>{
   return (
     <StackContainer
-        sx={containerStyle}>
+        {...rest}>
         <TitleTypo
           sx={titleStyle}>
           {title}

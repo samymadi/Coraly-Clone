@@ -24,7 +24,7 @@ import {ReactComponent as VerticalResize} from '../../assets/icons/vertical_resi
 
 const COLUMNS='Columns';
 const FILTERS='Filters';
-const GROUPED='Grouped';
+const GROUPED='Grouped in';
 const PHASES='Phases';
 const ORDERS='Orders';
 const COLOR='Color';
@@ -36,9 +36,9 @@ function Filter() {
 
 
 
-    const [state,setState] = useState<boolean>(false);
+    const [state,setState] = useState<boolean>(true);
     const [state1,setState1] = useState<boolean>(false);
-    const [state2,setState2] = useState<boolean>(false);
+    const [state2,setState2] = useState<boolean>(true);
     const [state3,setState3] = useState<boolean>(false);
     const [state4,setState4] = useState<boolean>(false);
     const [state5,setState5] = useState<boolean>(false);

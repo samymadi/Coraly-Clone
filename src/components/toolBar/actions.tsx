@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 import {
@@ -17,6 +17,9 @@ import {ReactComponent as Vector5} from '../../assets/icons/Vector5.svg';
 
 import IconButton from '../IconButton/iconButton';
 
+//test
+import Menu from '../shared/Menu/menu';
+
 
 const ADD ='Add';
 
@@ -27,13 +30,19 @@ function Actions() {
     neutral
   } =useTheme().paletteColor;
 
+
+
   return (
     <Container>
+      <Menu
+        open={true}
+        >
         <MuiIconButton>
               <Vector5
                 fill={neutral['60']}
                 />
         </MuiIconButton>    
+      </Menu>
         <MuiIconButton>
             <Vector4
               fill={neutral['60']}
