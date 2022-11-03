@@ -24,6 +24,8 @@ import CompleteProfile from '../../components/Pages/auth/completProfile/complete
 import ForgotPassword from '../../components/Pages/auth/forgotPassword/forgotPassword'
 import EmailSentForgotPassword from '../../components/Pages/auth/EmilSentForgotPassword/emailSentForgotPassword'
 import ChangePassword from '../../components/Pages/auth/changePassword/changePassword'
+//404 not found
+import PageNotFound from '../../components/Pages/404PageNotFound/PageNotFound'
 
 //dashboard
 import dashboardLayout from '../../components/Pages/dashboard/dashboardLayout/dashboardLayout'
@@ -79,6 +81,10 @@ const routes = {
     dashboard:{
       path:routesPath.DASHBOARD.ROOT,
       component: dashboardLayout
+    },
+    pageNotFound:{
+      path:routesPath.PAGE_NOT_FOUND,
+      component:PageNotFound
     }
 
         
@@ -92,10 +98,6 @@ const Routing:RoutingComponent = ()=>{
 
   return (
     <Router>
-      <Route path='/' exact>
-        <Redirect to='/dashboard/processes'/>
-
-      </Route>
         <Switch>
           {Object.values(routes).map((props,index)=>(
             <Route
@@ -104,6 +106,13 @@ const Routing:RoutingComponent = ()=>{
             />
           ))}
         </Switch> 
+
+      <Route path='/' exact>
+        <Redirect to='/dashboard/processes'/>
+      </Route>
+      <Route path='/dashboard' exact>
+        <Redirect to='/dashboard/processes'/>  
+      </Route>  
     </Router>
   )
 }

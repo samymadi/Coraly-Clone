@@ -27,6 +27,15 @@ const PaletteLight = {
   accentColorYellow:'#F6D524',
   accentColorMagenta:'#E547FF',
 
+
+
+      stateSuccess:'#34D182',
+      stateError:'#FF4339',
+      stateWarning:'#F9A55C',
+      stateSuccessBg:'#D6FCDA',
+      stateErrorBg:'#FFE8DA',
+      stateWarningBg:'#FEF4DE'
+
 }
 
 
@@ -79,6 +88,15 @@ const lightThemeObject = {
       aqua:PaletteLight.accentColorAqua,
       yellow:PaletteLight.accentColorYellow,
       magenta:PaletteLight.accentColorMagenta
+    },
+
+    states:{
+      success:PaletteLight.stateSuccess,
+      error:PaletteLight.stateError,
+      warning:PaletteLight.stateWarning,
+      successBg:PaletteLight.stateSuccessBg,
+      errorBg:PaletteLight.stateErrorBg,
+      warningBg:PaletteLight.stateWarningBg
     }
     
     

@@ -15,9 +15,15 @@ import TicketChipGroup from './TicketChipGroup'
 import ChapterSelect from './ChapterSelect'
 import VendorSelect from './VendorsSelect'
 import Divider from '../../../divider/divider'
+import CustomChip from './customChip'
 
 //assets
 import {ReactComponent as Calendar} from '../../../../assets/icons/Date.svg';
+
+
+const chipLabelTag = [
+    "#database_object_1",
+]
 
 function HeaderForm() {
 
@@ -41,10 +47,21 @@ function HeaderForm() {
                 rightIcon={<Calendar/>}/> 
         </Wrapper>
             <TicketChipGroup/>
-        <Wrapper>
-            <VendorSelect/>    
+        <Wrapper
+            sx={{maxHeight:'25px'}}>
+            <VendorSelect/>
+            <Divider
+                orientation='vertical'/>
+            {chipLabelTag.map((data,index)=>(   
+                <CustomChip
+                    key={index} //replace index by tag  ID
+                    label={data}/>    
+            ))}
         </Wrapper>
-        <Divider/>
+        <Divider
+            sx={{
+                marginTop:'10px'
+            }}/>
     </Container>
   )
 }

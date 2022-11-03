@@ -23,10 +23,15 @@ const Dashboard ={
       LOGOUT:Login.LOGIN
 }
 
+const Extra={
+    PAGE_NOT_FOUND:'*'
+}
+
 
 const routesPath = {
     ...Login,
-    DASHBOARD:{...Dashboard}
+    DASHBOARD:{...Dashboard},
+    ...Extra
     
 }
 

@@ -23,7 +23,10 @@ interface IIconLabel{
     typoStyle?: SxProps<Theme>
 }
 
-const IconLabel:React.FC<IIconLabel & StackProps > = ({
+
+export type IconLabelPorps= IIconLabel & StackProps 
+
+const IconLabel:React.FC<IconLabelPorps> = ({
     leftIcon,
     rightIcon,
     label,

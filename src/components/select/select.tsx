@@ -8,6 +8,7 @@ import {
     SxProps,
     Theme,
     ButtonBase,
+    useTheme,
 } from '@mui/material';
 
 
@@ -38,6 +39,9 @@ function Select({
     leftIcon,
     ...rest
 }:MenuProps & ISelectProps) {
+
+
+    const {neutral} = useTheme().paletteColor
   return (
     <Menu
         {...rest}
@@ -46,6 +50,11 @@ function Select({
             <CustomBaseButton>
                 <IconLabel
                     sx={iconLabelStyle}
+                    typoStyle={{
+                        color:neutral['70'],
+                        fontWeight:'600',
+                        fontSize:'14px',
+                    }}
                     rightIcon={leftIcon}
                     leftIcon={<DownArrow/>}
                     label={value}/> 
