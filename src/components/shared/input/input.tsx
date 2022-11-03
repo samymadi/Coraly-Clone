@@ -38,6 +38,7 @@ const  Input:React.FC<InputProps> = ({
         variant='outlined'
         onChange={handleChange}
         {...rest}
+        data-testid='input'
         />
         
  

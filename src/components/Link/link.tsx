@@ -9,7 +9,7 @@ import {
 
 
 interface ILinkProps {
-    external?:string,
+    external?:boolean,
     href:string
 }
 
@@ -25,17 +25,20 @@ const Link:React.FC<LinkProps>=({
 
     const {href,to,..._rest} = rest;
   return (
-    external ? <a 
-                     style={{textDecoration:'none'}}
-                    {...rest}>
+    external ? <a    
+                    style={{textDecoration:'none'}}
+                    {...rest}
+                    data-testid='a_tag'>
                     {children}
                </a>  
              : 
             
             <RouterDomLink
+                 
                 style={{textDecoration:'none'}}
                 to={href}
-                {..._rest}>
+                {..._rest}
+                data-testid='link_tag'>
                     {children}
             </RouterDomLink> 
   )
