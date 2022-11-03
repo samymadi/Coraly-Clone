@@ -61,7 +61,7 @@ function Checkboxs() {
                     sx={{
                         fontSize:'14px',
                         color:paletteColor.neutral['100']}}>
-                    &nbsp;{AND}
+                    &nbsp;{AND}&nbsp;
                 </Typography>
                 <TextRedirection
                         href='somewhere'

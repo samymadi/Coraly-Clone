@@ -11,7 +11,7 @@ import {
 } from '@mui/material'
 
 
-import ChipCheckbox from '../../../ChipCheckbox/chipCheckbox';
+import ContractChipCheckbox from './ContractChipCheckbox';
 
 //assets
 import {ReactComponent as Start} from '../../../../assets/icons/Start.svg';
@@ -29,7 +29,9 @@ function ActionsBar() {
 
     const {
         primary,
+        actionSecondary,
         neutral,
+        states,
     }=useTheme().paletteColor;
 
   return (
@@ -39,11 +41,15 @@ function ActionsBar() {
         <TextTypo>
             {NEW_CONTACT}
         </TextTypo>
-        {/* <ChipCheckbox
-            value={state}
-            setValue={setState}
-            label='8 Cards'
-            actifColor='#512'/> */}
+        <ContractChipCheckbox
+                color={actionSecondary.default}
+                children='8 cards'/>
+        <ContractChipCheckbox
+                color={states.error}
+                children='2'/>
+        <ContractChipCheckbox
+                color={states.warning}
+                children='3'/>                        
         <CustomIconButton>
                 <AddNew/>
         </CustomIconButton>  

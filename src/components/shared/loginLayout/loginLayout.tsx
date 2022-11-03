@@ -71,6 +71,9 @@ const LayoutStack = styled(Stack)(({theme})=>({
   flexDirection:'row',
   height:'100vh',
   // width:'100%',
+  "&  ::-webkit-scrollbar":{
+    display:'none',
+  }
 }))
 
 

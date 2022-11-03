@@ -7,6 +7,7 @@ import CheckBoxLabel from '../../../shared/checkBoxLabel/checkBoxLabel'
 import CheckboxInput from '../../../shared/checkBoxLabel/checkboxInput'
 
 import TextRedirection from '../../../textRedirection/textRedirection'
+import routesPath from '../../../../navigation/routing/routePaths'
 
 
 
@@ -28,7 +29,7 @@ function SessionCondition() {
                     }
             label={REMEMBE_ME}/>
 
-        <TextRedirection href='tosomewhere'
+        <TextRedirection href={routesPath.FORGOT_PASSWORD}
                          to=''
                          label={FORGET_PASSWORD}
                         />        

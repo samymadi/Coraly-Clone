@@ -23,7 +23,10 @@ function AddContractTabContainer({
                 {children} 
             </Wrapper>
             <Divider 
-                orientation='vertical'/>
+                orientation='vertical'
+                sx={{
+                    marginLeft:'',
+                }}/>
             <AddContractTabs
                 {...rest}/>
     </Container>

@@ -46,6 +46,7 @@ const  ChipCheckbox:React.FC<ChipCheckBoxProps> = ({
     actifColor,
     ChecboxIcon:Icon,
     value,
+    sx,
     ...rest
 })=> {
 
@@ -73,7 +74,11 @@ const  ChipCheckbox:React.FC<ChipCheckBoxProps> = ({
   return (
     <CustomCheckBoxLabel
         sx={{
-            backgroundColor:value ?`${actifColor}${COLOR_OPCITY_HEXA}`:""
+            backgroundColor:value ?`${actifColor}${COLOR_OPCITY_HEXA}`:"",
+            "& svg":{
+                display: !Icon ? 'none':""
+            },
+            ...sx
         }}
         label={<LabelContainer>
                     <LabelTypography

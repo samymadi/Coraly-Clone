@@ -1,5 +1,8 @@
 import React from 'react'
 
+import { 
+  useHistory 
+} from 'react-router-dom'
 
 import LoginLayout from '../../../shared/loginLayout/loginLayout'
 import TitleDesc from './titleDesc'
@@ -20,7 +23,15 @@ const CREATE_NEW_ACCOUNT ='Create now the account';
 const DO_YOU_HAVE_ACCOUNT='Do you have an account?'
 const SIGN_IN='Sign in'
 
+
 function CreateWorkSpace() {
+
+  const {push} = useHistory();
+
+
+  const onSubmit = ()=>{
+    push(routesPath.EMAIL_CONFIRMATION_WORK_SPACE);
+  }
   return (
     <LoginLayout
         background={Background}
@@ -33,6 +44,7 @@ function CreateWorkSpace() {
     <TitleDesc/>
     <Form/>
     <CustomButtonIconLabel
+        onClick={onSubmit}
         color='secondary'
         size='large'
         sx={{marginBottom:'25px'}}>

@@ -1,6 +1,11 @@
 import React from 'react'
 
 
+import { 
+    useHistory 
+} from 'react-router-dom'
+
+
 import LoginLayout from '../../../shared/loginLayout/loginLayout'
 import TitleDesc from './titleDesc'
 import Form from './form'
@@ -21,6 +26,16 @@ const LOGIN='Login'
 const RESET_PASSWORD ='Reset Password';
 
 function ForgotPassword() {
+
+
+    const {push} = useHistory();
+
+
+    const onSubmit = ()=>{
+      push(routesPath.EMAIL_SENT_PASSWORD);
+    }
+
+
   return (
     <LoginLayout
         background={Background}
@@ -30,6 +45,7 @@ function ForgotPassword() {
         <TitleDesc/>  
         <Form/>
         <CustomButtonIconLabel
+            onClick={onSubmit}
             sx={{
                 marginBottom:'32px'
             }}
@@ -37,6 +53,7 @@ function ForgotPassword() {
                 {RESET_PASSWORD}
         </CustomButtonIconLabel>
         <TextTemplateCreateAccount
+         
             label={GO_BACK_TO_LOGIN}
             textRedirection={{
                 label:LOGIN,

@@ -36,8 +36,11 @@ function FieldPhaseForm() {
     <AddContractTabContainer
         onChange={handleOnChange}
         value={value}>
+        <AddContractsPanel
+          index={0}
+          value={value}/>  
         <AddContractsPanel 
-              index={0} 
+              index={1} 
               value={value}>
           <Container>
               <Typography
@@ -52,9 +55,7 @@ function FieldPhaseForm() {
               <StartForm/>
           </Container>
         </AddContractsPanel>
-        <AddContractsPanel
-          index={1}
-          value={value}/>
+        
     </AddContractTabContainer>
   )
 }

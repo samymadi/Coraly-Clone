@@ -29,7 +29,9 @@ const CustomTab = styled(Tab)(({theme})=>({
   minHeight:'fit-content',
   padding:'8px 12px',
     "& svg":{ 
-        fill:theme.paletteColor.neutral['60']
+        fill:theme.paletteColor.neutral['60'],
+        width:'15px',
+        height:'15px',
     },
     "&.Mui-selected":{
       "& svg":{
