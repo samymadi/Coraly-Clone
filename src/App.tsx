@@ -1,25 +1,58 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{
+  useEffect,
+  useState,
+} from 'react';
+
+
+//material ui
+import {
+   ThemeProvider 
+} from '@mui/material/styles';
+
+
+// material ui themes
+import {
+  lightTheme
+} from './style/theme';
+
+
+
+//redux
+import { 
+  Provider as StoreProvider,
+} from 'react-redux';
+
+
+//redux store
+
+import store from './store/store';
+
+
+//routing 
+import Routing from './navigation/routing/Routing';
+
+
 
 function App() {
+
+  const [state,setState] = useState<{name:string,age?:number}>({name:'sam'});
+
+
+  useEffect(()=>{
+    setState(()=>{
+      return {name:'madi'};
+    });
+    console.log(state);
+  },[])
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StoreProvider store={store}>
+      <ThemeProvider theme={lightTheme}>
+            <Routing/>
+      </ThemeProvider>
+    </StoreProvider>  
   );
 }
 
