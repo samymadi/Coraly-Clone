@@ -45,8 +45,12 @@ export default AddContractTabs
 
 
 const CustomTabs= styled(Tabs)(({theme})=>({
-    flex:'0.053',
-    
+    flex:'0.046',
+
+    [theme.breakpoints.down('lg')]:{
+      flex:'0.053',
+    },
+    marginTop:'50px',
     "& .MuiTabs-flexContainer":{
       gap:'10px',
     },

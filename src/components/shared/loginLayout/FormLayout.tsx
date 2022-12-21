@@ -6,11 +6,11 @@ import React, {
 //material ui
 import {
     Stack,
-    StackProps
+    StackProps,
+    styled,
 } from '@mui/material';
 
 //styled engine
-import styled from '@emotion/styled';
 
 //assets
 import {ReactComponent as Logo} from '../../../assets/logos/smallLogo.svg';
@@ -27,10 +27,7 @@ const  FormLayout:FormLayoutComponent = ({
     <FormLayoutStack
     {...rest}>
         <Logo 
-            style={{
-                    marginBottom:'60',
-                    minHeight:'50px'
-                    }}/>
+            className='logo' />
         {children}
     </FormLayoutStack>
   )
@@ -40,8 +37,19 @@ export default FormLayout
 
 
 
-const FormLayoutStack = styled(Stack)(()=>({
+const FormLayoutStack = styled(Stack)(({theme})=>({
    flexDirection:'column',
    overflowY:'scroll',
    padding:'60px 60px',
+   "& .logo":{
+      marginBottom:'90px',
+      marginTop:'50px',
+      minHeight:'50px',
+      
+    [theme.breakpoints.down('lg')]:{
+      marginBottom:'50px',
+      marginTop:'20px',
+      minHeight:'50px',
+    }
+   }
 }))

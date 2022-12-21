@@ -16,7 +16,7 @@ import routesPath from '../../../../navigation/routing/routePaths'
 
 //assets
 import AuthBackground3 from '../../../../assets/backgrounds/authBackground31.jpg';
-import {ReactComponent as Background} from '../../../../assets/backgrounds/authBackground2.svg';
+import {ReactComponent as Background} from '../../../../assets/backgrounds/authBackground1.svg';
 
 
 

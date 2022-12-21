@@ -8,7 +8,7 @@ import Form from './form'
 
 
 import AuthBackground2 from '../../../../assets/backgrounds/authBackground22.jpg';
-import {ReactComponent as Background} from '../../../../assets/backgrounds/authBackground3.svg';
+import {ReactComponent as Background} from '../../../../assets/backgrounds/authBackground2.svg';
 
 
 

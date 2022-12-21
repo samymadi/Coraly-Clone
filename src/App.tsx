@@ -1,4 +1,7 @@
-import React from 'react';
+import React,{
+  useEffect,
+  useState,
+} from 'react';
 
 
 //material ui
@@ -25,17 +28,22 @@ import {
 import store from './store/store';
 
 
-
-
-
-
-
 //routing 
 import Routing from './navigation/routing/Routing';
 
 
 
 function App() {
+
+  const [state,setState] = useState<{name:string,age?:number}>({name:'sam'});
+
+
+  useEffect(()=>{
+    setState(()=>{
+      return {name:'madi'};
+    });
+    console.log(state);
+  },[])
 
   
 

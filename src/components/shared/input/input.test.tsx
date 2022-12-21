@@ -42,7 +42,6 @@ describe('Input', () => {
     })
 
     test('is the state value rendered',()=>{
-        console.log(container.find('input')) ;
             
     })
 

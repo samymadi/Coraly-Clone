@@ -52,9 +52,9 @@ function Menu({
                 onClick={onClose}
                 {...rest} >
                     {items}
-                    <samp>
-                        sa
-                    </samp>
+                    
+                        Select some Labels
+                    
             </CustomMenu>
     </Container>
   )
